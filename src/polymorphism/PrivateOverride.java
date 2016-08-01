@@ -1,7 +1,8 @@
 package polymorphism;
 
 /**
- * Created by 20728 on 2016/5/7.
+ * This is a template
+ * Created by Novemser on 2016/5/7.
  */
 public class PrivateOverride {
     private void f() {
