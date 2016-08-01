@@ -1,5 +1,8 @@
 package FactoryDesignPattern;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 /**
  * 用工厂方法设计模式实现的游戏
  * Created by hugansen on 2016/8/1.
