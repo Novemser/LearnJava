@@ -24,7 +24,7 @@ public class FilterAdapter implements Processor {
     }
 
     public static void main(String...args){
-       
+
         // 类似于代理，进行封装
         Processor processor = new FilterAdapter(new Filter());
         Apply.process(processor, "hahahahaha 23333");
