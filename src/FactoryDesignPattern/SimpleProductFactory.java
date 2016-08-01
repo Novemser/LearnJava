@@ -9,7 +9,7 @@ package FactoryDesignPattern;
  * Created by hugansen on 2016/8/1.
  */
 public class SimpleProductFactory {
-    public static Product createProduct(int type) {
+    private static Product createProduct(int type) {
         Product product = null;
         switch (type) {
             case 0:
