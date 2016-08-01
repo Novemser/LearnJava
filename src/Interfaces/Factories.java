@@ -1,6 +1,8 @@
 package Interfaces;
 
 /**
+ * 工厂设计模式
+ * 使得接口的实现与代码完全分离
  * Created by hugansen on 2016/8/1.
  */
 interface Service {
