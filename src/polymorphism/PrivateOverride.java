@@ -9,7 +9,11 @@ public class PrivateOverride {
         System.out.println("private f()");
     }
 
-    public static void main(String...args) {
+    String process() {
+        return "Base process";
+    }
+
+    public static void main(String... args) {
         PrivateOverride po = new Derived();
         po.f();
 
@@ -22,6 +26,10 @@ class Derived extends PrivateOverride {
 
     private void g() {
 
+    }
+
+    String process() {
+        return (super.process());
     }
 
     public void f() {
