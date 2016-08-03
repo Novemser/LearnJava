@@ -70,6 +70,5 @@ public class Factories {
     public static void main(String... s) {
         serviceConsumer(Implementation1.factory);
         serviceConsumer(Implementation2.factory);
-
     }
 }

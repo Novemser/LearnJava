@@ -3,8 +3,10 @@ package InnerClasses;
 import java.io.Serializable;
 
 /**
+ *
  * Created by hugansen on 2016/8/3.
  */
+
 public class ClassInMethod {
     public Contents contents() {
 
@@ -24,6 +26,24 @@ public class ClassInMethod {
                 return heheda;
             }
         };
+    }
+    class ObjInCls {
+        // 普通内部类不能有静态字段
+        // 原因如下：
+        // 实际上普通的内部类是外部类的一个成员变量
+        // 这个内部类只有在外部类实例化以后，才能被实例化
+        // 而静态成员不依赖上面这个条件
+        // 静态成员在类第一次被加载的时候就放在内存了
+        // 不需要外部类先初始化以后才能使用内部了
+        // 这与已知条件矛盾
+        
+        // static int o1 = 1; compile time error
+        int o2 = 9;
+
+        // BUT:
+        // you can declare static fields if they are
+        // constants and are written in compile time.
+        static final int MAX_VAL = 100000;
     }
 
     public Contents getContent() {
