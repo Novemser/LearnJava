@@ -1,21 +1,24 @@
 package FactoryDesignPattern;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
-
 /**
  * 用工厂方法设计模式实现的游戏
  * Created by hugansen on 2016/8/1.
  */
 
 
-interface Game { boolean move(); }
-interface GameFactory { Game createGame(); }
+interface Game {
+    boolean move();
+}
+
+interface GameFactory {
+    Game createGame();
+}
 
 class Checkers implements Game {
 
     private int moves = 0;
-    private  static final int MOVES = 3;
+    private static final int MOVES = 3;
+
     @Override
     public boolean move() {
         System.out.println("Checkers move " + moves);
@@ -33,7 +36,8 @@ class CheckersFactory implements GameFactory {
 
 class Chess implements Game {
     private int moves = 0;
-    private  static final int MOVES = 4;
+    private static final int MOVES = 4;
+
     @Override
     public boolean move() {
         System.out.println("Chess move " + moves);
@@ -50,12 +54,12 @@ class ChessFactory implements GameFactory {
 }
 
 public class Games {
-    public static void playGame(GameFactory factory) {
+    private static void playGame(GameFactory factory) {
         Game game = factory.createGame();
-        while (game.move());
+        while (game.move()) ;
     }
 
-    public static void main(String...args) {
+    public static void main(String... args) {
         playGame(new ChessFactory());
         playGame(new CheckersFactory());
     }
