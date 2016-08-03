@@ -14,7 +14,7 @@ class MNA {
             System.out.println("Second");
         }
         // 第三层可以调用前两层的方法
-        public class B {
+        class B {
             void third() {
                 first();
                 second();
