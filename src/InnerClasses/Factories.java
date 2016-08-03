@@ -37,7 +37,7 @@ class Implementation1 implements Service {
         System.out.println("Imp1 m2");
     }
 
-    public static ServiceFactory factory = new ServiceFactory() {
+    static ServiceFactory factory = new ServiceFactory() {
         @Override
         public Service getService() {
             return new Implementation1();
