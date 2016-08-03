@@ -3,7 +3,6 @@ package InnerClasses;
 import java.io.Serializable;
 
 /**
- *
  * Created by hugansen on 2016/8/3.
  */
 
@@ -27,6 +26,7 @@ public class ClassInMethod {
             }
         };
     }
+
     class ObjInCls {
         // 普通内部类不能有静态字段
         // 原因如下：
@@ -36,7 +36,7 @@ public class ClassInMethod {
         // 静态成员在类第一次被加载的时候就放在内存了
         // 不需要外部类先初始化以后才能使用内部了
         // 这与已知条件矛盾
-        
+
         // static int o1 = 1; compile time error
         int o2 = 9;
 
