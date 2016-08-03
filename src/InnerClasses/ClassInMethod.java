@@ -12,7 +12,7 @@ public class ClassInMethod {
         final int heheda = 9;
         // 啊 原来这是一个接口 新建的时候会自动生成需要重写的方法
         // 很想Android里创建一个Click listener的逻辑
-        
+
         // 这里实际上是创建了一个新的实现了Contents接口的类
         // 只不过木有名字
         return new Contents() {
