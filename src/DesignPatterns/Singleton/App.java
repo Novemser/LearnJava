@@ -7,17 +7,40 @@ package DesignPatterns.Singleton;
  * Created by Novemser on 2016/9/20.
  */
 public class App {
-
+    /**
+     * Gets current time.
+     *
+     * @return the current time
+     */
     public static long getCurrentTime() {
         return System.currentTimeMillis();
     }
 
-    public static void main(String...args) {
-        App app = new App();
+    private static void testInstance(String title, Runnable run) {
+        long startTime = getCurrentTime();
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            run.run();
+        }
+        long endTime = getCurrentTime();
+        System.out.println(title + ":" + (endTime - startTime));
+    }
+    /**
+     * Main.
+     *
+     * @param args the main args
+     */
+    @SuppressWarnings("unchecked")
+    public static void main(String...args){
+        testInstance("IT", IvoryTower::gerInstance);
+
+        testInstance("TSDCL", ThreadSafeDoubleCheckLocking::getInstance);
+
+        testInstance("IODH", InitializationOnDemandHolder::getInstance);
+
         long startTime, endTime;
 
         // Eagerly initialized static instance guarantees thread safety.
-        int MAX_ITE = 1000000000;
+        int MAX_ITE = Integer.MAX_VALUE;
         startTime = getCurrentTime();
         for(int i = 0; i < MAX_ITE; i++) {
             IvoryTower.gerInstance();
