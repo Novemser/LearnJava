@@ -1,7 +1,6 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
+package test;
 
 import java.io.Serializable;
-import java.util.*;
 
 public class HelloWorld implements Comparable<HelloWorld>, CharSequence, Serializable {
 
@@ -12,17 +11,17 @@ public class HelloWorld implements Comparable<HelloWorld>, CharSequence, Seriali
 
     public static void main(String...args) {
 //        System.out.println("Hello world!");
-//        new HelloWorld().multiDimension();
+//        new test.HelloWorld().multiDimension();
 //
-//        List<HelloWorld> list = new ArrayList<>();
+//        List<test.HelloWorld> list = new ArrayList<>();
 //
 //        for (int i = 0; i < 22; i++) {
-//            list.add(new HelloWorld());
+//            list.add(new test.HelloWorld());
 //        }
 //
 //        Arrays.binarySearch(list.toArray(), 0, list.size() - 1, new Object(), (o1, o2) -> 1);
 //
-////        Arrays.parallelSort((HelloWorld[])list.toArray());
+////        Arrays.parallelSort((test.HelloWorld[])list.toArray());
 //        Integer integer = 88, int2 = new Integer(88);
 //        Character ch = 'f';
 //        ch++;

@@ -25,7 +25,7 @@ public class App {
         System.out.println(title + ":" + (endTime - startTime));
     }
     /**
-     * Main.
+     * test.Main.
      *
      * @param args the main args
      */

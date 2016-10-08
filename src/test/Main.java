@@ -1,9 +1,11 @@
+package test;
+
 public class Main {
 
     private static int x = printInt(44);
 
     private static int printInt(int num) {
-        System.out.println("Main int " + num);
+        System.out.println("test.Main int " + num);
         return num + 42;
     }
 
@@ -30,15 +32,15 @@ public class Main {
     }
 
     public static void main(String... args) {
-//        Main main = new Main();
+//        test.Main main = new test.Main();
 
         for (int i = 0; i < 5; i++) {
-//            new Main();
+//            new test.Main();
 //            new Thread(new Runnable() {
 //                Random random = new Random(14);
 //                @Override
 //                public void run() {
-//                    Main main = new Main();
+//                    test.Main main = new test.Main();
 //                    main.arr = new int[100000000];
 //
 //                    for (int i = 0; i < 100000000; i++) {
