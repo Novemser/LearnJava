@@ -7,7 +7,7 @@ package test;
  * 2016/10/8
  */
 public class CPUUsage {
-    // Using 100%cpu on E3-1230V3
+    // Using 100% CPU on E3-1230V3
     public static void main(String...args) {
         for (int i = 0; i < 8; i++) {
             new Thread(() -> {
