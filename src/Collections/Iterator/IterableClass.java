@@ -25,6 +25,13 @@ public class IterableClass implements Iterable<String> {
             public String next() {
                 return words[index++];
             }
+
+            // iteration for array is acceptable
+            public void forEachTest() {
+                for (String s : words) {
+                    System.out.println(s);
+                }
+            }
         };
     }
 
