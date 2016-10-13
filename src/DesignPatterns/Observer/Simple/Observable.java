@@ -19,6 +19,7 @@ public class Observable {
     public synchronized void addObserver(Observer observer) {
         if (!observers.contains(observer))
             observers.addElement(observer);
+        observers.get(1);
     }
 
     public synchronized void deleteObserver(Observer observer) {
@@ -30,9 +31,10 @@ public class Observable {
     }
 
     public void notifyObservers(Object arg) {
+
         Object[] arrLocal;
         synchronized (this) {
-            if (!changed)
+            if (!hasChanged())
                 return;
             arrLocal = observers.toArray();
             clearChanged();
@@ -41,6 +43,10 @@ public class Observable {
         for (int i = arrLocal.length - 1; i >= 0; i--)
             ((Observer)arrLocal[i]).update(this, arg);
 
+    }
+
+    public boolean hasChanged() {
+        return changed;
     }
 
     private void clearChanged() {

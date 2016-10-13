@@ -27,6 +27,18 @@ public class ClassInMethod {
         };
     }
 
+    public void methodClass() {
+        String greetingStr = getClass().getName();
+
+        class InnerMethodClass {
+            public void greeting() {
+                System.out.println(greetingStr);
+            }
+        }
+
+        new InnerMethodClass().greeting();
+    }
+
     class ObjInCls {
         // 普通内部类不能有静态字段
         // 原因如下：
@@ -36,8 +48,10 @@ public class ClassInMethod {
         // 静态成员在类第一次被加载的时候就放在内存了
         // 不需要外部类先初始化以后才能使用内部了
         // 这与已知条件矛盾
+        /* Example
+            static int o1 = 1; compile time error
+         */
 
-        // static int o1 = 1; compile time error
         int o2 = 9;
 
         // BUT:
@@ -69,6 +83,9 @@ public class ClassInMethod {
     }
 
     public static void main(String... args) {
-        new ClassInMethod().getObj("Shit");
+        ClassInMethod method = new ClassInMethod();
+        method.getObj("Shit");
+        int objVal = ObjInCls.MAX_VAL;
+        method.methodClass();
     }
 }
