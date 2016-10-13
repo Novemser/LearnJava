@@ -3,6 +3,7 @@ package Practice;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * Project: LearnJava
@@ -16,15 +17,19 @@ public class Stack implements Collection<Integer> {
 
     private class StackIterator implements Iterator<Integer> {
         private int index = 0;
+        private Object[] elements = Stack.this.elements.toArray();
 
         @Override
         public boolean hasNext() {
-            return index < elements.size();
+            return index < elements.length;
         }
 
         @Override
         public Integer next() {
-            return elements.get(index++);
+            if (!hasNext())
+                throw new NoSuchElementException();
+
+            return (Integer) elements[index++];
         }
 
         public void reset() {
@@ -32,8 +37,29 @@ public class Stack implements Collection<Integer> {
         }
     }
 
+    class StackIteratorV2 {
+        private int index = 0;
+        private Object[] elements = Stack.this.elements.toArray();
+
+        public void reset() {
+            index = 0;
+        }
+
+        public int next() {
+            if (!hasNext())
+                throw new NoSuchElementException();
+
+            return (int) elements[index++];
+        }
+
+        public boolean hasNext() {
+            return index < elements.length;
+        }
+    }
+
     public Stack() {
         elements = new ArrayList<>();
+        elements.iterator();
     }
 
     public void push(int number) {
@@ -132,11 +158,26 @@ public class Stack implements Collection<Integer> {
         myStack.push(23333);
 
         Iterator iterator = myStack.iterator();
-        System.out.println("Using Iterator:");
+        System.out.println("Using system Iterator:");
         while (iterator.hasNext()) {
             System.out.println("Value:" + iterator.next());
         }
 
+        System.out.println(new String(new char[20]).replace('\0', '='));
+
+        StackIteratorV2 stackIter = myStack.new StackIteratorV2();
+        System.out.println("Using stackIter:");
+        while (stackIter.hasNext()) {
+            System.out.println("Value:" + stackIter.next());
+        }
+        System.out.println(new String(new char[20]).replace('\0', '='));
+
+        stackIter.reset();
+        System.out.println("Using reset stackIter:");
+
+        while (stackIter.hasNext()) {
+            System.out.println("Value:" + stackIter.next());
+        }
         System.out.println(new String(new char[20]).replace('\0', '='));
 
         System.out.println("Using forEach:");
