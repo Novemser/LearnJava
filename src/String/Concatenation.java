@@ -8,9 +8,9 @@ package String;
  */
 public class Concatenation {
     public static void main(String...args) {
-        String mango = "Mao ze dong";
+        String a = "Hello";
         // 编译器会自动优化成StringBuider的实现
-        String s = "abc " + mango + " xijinping " + 55;
-        System.out.println(s);
+        String b = "abc " + a + " def " + 55;
+        System.out.println(b);
     }
 }
