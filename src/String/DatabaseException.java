@@ -4,7 +4,7 @@ package String;
  * Project: LearnJava
  * Package: String
  * Author:  Novemser
- * 2016/10/15
+ * 2016/10/15t
  */
 public class DatabaseException extends Exception {
     public DatabaseException(int transactionId, int queryId,

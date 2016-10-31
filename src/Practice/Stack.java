@@ -57,6 +57,10 @@ public class Stack implements Collection<Integer> {
         }
     }
 
+    public Stack(Stack stack) {
+
+    }
+
     public Stack() {
         elements = new ArrayList<>();
         elements.iterator();

@@ -6,6 +6,8 @@ package Interfaces;
  * Created by hugansen on 2016/8/1.
  */
 interface Service {
+    public static final int PARAMETER = 23333;
+
     void method1();
 
     void method2();
