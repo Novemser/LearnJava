@@ -5,6 +5,10 @@ package Interfaces;
  * 使得接口的实现与代码完全分离
  * Created by hugansen on 2016/8/1.
  */
+interface ITestInterfaceInher extends Service {
+    void interfaceCanDoInhertance();
+}
+
 interface Service {
     public static final int PARAMETER = 23333;
 
