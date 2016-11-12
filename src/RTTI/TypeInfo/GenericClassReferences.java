@@ -15,5 +15,9 @@ public class GenericClassReferences {
         intClass = double.class;
         // No good
         //genericIntClass = double.class;
+        // Strange
+        // Integer extends Number, but why can't work?
+        //Class<Number> genericNumberClass = double.class;
+
     }
 }
