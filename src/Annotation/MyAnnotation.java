@@ -17,4 +17,5 @@ public @interface MyAnnotation {
     String studentName() default "Alex";
     String stuAddress() default "Caoan Highway";
     String stuStream() default "SSE";
+    int count() ;
 }
