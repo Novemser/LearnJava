@@ -1,5 +1,7 @@
 *.class
 .idea/*
-
-
-
+*.dll
+*.lib
+*.obj
+*.exp
+cl
