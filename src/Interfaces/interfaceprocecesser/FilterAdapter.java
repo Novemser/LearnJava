@@ -27,6 +27,6 @@ public class FilterAdapter implements Processor {
 
         // 类似于代理，进行封装
         Processor processor = new FilterAdapter(new Filter());
-        Apply.process(processor, "hahahahaha 23333");
+        Apply.process(processor, "haha hjthahaha 23333");
     }
 }
