@@ -14,5 +14,7 @@ public class NativeHelloWorld {
 
     public static void main(String[] args) {
         new NativeHelloWorld().sayHello();
+        String s = new String();
+        s.equals("2");
     }
 }
