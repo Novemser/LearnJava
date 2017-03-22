@@ -12,7 +12,7 @@ public class ArraySort {
     public static void main(String[] args) {
         int[] intArray = new int[]{4, 1, 3, -23};
         Arrays.sort(intArray);
-        System.out.println(intArray);
+        System.out.println(Arrays.toString(intArray));
     }
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
