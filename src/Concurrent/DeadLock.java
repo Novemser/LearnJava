@@ -57,5 +57,19 @@ public class DeadLock {
         });
         thread1.start();
         thread2.start();
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    static class AA {
+        private String lA;
+    }
+
+    static class BB extends AA {
+
     }
 }
