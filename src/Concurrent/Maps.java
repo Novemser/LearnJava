@@ -28,12 +28,12 @@ public class Maps {
         linkedHashMap.put(null, null);
 
         // Key Not null, value nullable
-        treeMap.put(null, null);
+//        treeMap.put(null, null);
 
         // No
-        concurrentHashMap.put(null, null);
+//        concurrentHashMap.put(null, null);
 
         // No
-        hashtable.put(null, null);
+//        hashtable.put(null, null);
     }
 }
