@@ -37,7 +37,6 @@ public class Maps {
 
         map.put(new KeyClass(), new ValueClass(2));
         map.put(new KeyClass(), new ValueClass(3));
-
         for (Map.Entry<KeyClass, ValueClass> entry : map.entrySet()) {
             System.out.println("Key:" + entry.getKey() + " Value:" + entry.getValue());
         }
