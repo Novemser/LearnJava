@@ -19,6 +19,8 @@ public class CAS {
         integer.incrementAndGet();
         AtomicStampedReference<Integer> reference = new AtomicStampedReference<>(19, 2);
 
+        int NCPU = Runtime.getRuntime().availableProcessors();
+        System.out.println(NCPU);
     }
 
 }

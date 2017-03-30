@@ -50,6 +50,11 @@ public class ProducerConsumerInJava {
                     queue.add(i);
                     queue.notifyAll();
                 }
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -68,9 +73,7 @@ public class ProducerConsumerInJava {
                     while (queue.isEmpty()) {
                         try {
                             System.out.println("Queue is empty!");
-                            queue.notifyAll();
-                            Thread.sleep(1000);
-//                            queue.wait();
+                            queue.wait();
                             System.out.println("Reader restart");
                         } catch (InterruptedException e) {
                             e.printStackTrace();
@@ -78,7 +81,7 @@ public class ProducerConsumerInJava {
                     }
 
                     System.out.println("Consuming value:" + queue.poll());
-//                    queue.notifyAll();
+                    queue.notifyAll();
                 }
             }
         }

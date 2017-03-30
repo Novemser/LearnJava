@@ -11,13 +11,21 @@ public class F {
         throw new Exception("F");
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 //        String a = args[1];
 //        String b = args[2];
 //        String c = args[3];
 //        System.out.println("Arg1:" + a);
-
-        new F();
+        String str = "2333";
+        switch (str) {
+            case "2333":
+                System.out.println("sss");
+                break;
+            case "2":
+                System.out.println("ddd");
+                break;
+        }
+        throw new RuntimeException("23333");
     }
 
 }

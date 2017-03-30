@@ -19,6 +19,7 @@ public class YieldExample {
         consumer.setPriority(Thread.MAX_PRIORITY); //Max Priority
 
         producer.start();
+
         try {
             producer.join();
         } catch (InterruptedException e) {
