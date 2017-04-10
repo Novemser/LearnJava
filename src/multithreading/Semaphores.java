@@ -14,7 +14,7 @@ import static java.lang.Thread.sleep;
  */
 public class Semaphores {
     private volatile static double cnt = 0;
-
+    public static final Integer nm = 3;
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(20);
 

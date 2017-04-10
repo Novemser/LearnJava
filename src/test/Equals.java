@@ -10,12 +10,13 @@ import java.util.List;
  * 2017/2/28
  */
 public class Equals {
-    float f0() {
-        short i = 0;
-        return i;
-    }
-
     public static void main(String[] args) {
+        Double i = new Double(3);
+        Double j = 3d;
+        Double m = 3d;
+        System.out.println(i == j);
+        System.out.println(j == m);
+
         String s = "hello";
 
         String t = "hello";
@@ -29,5 +30,10 @@ public class Equals {
         System.out.println(c);
         System.out.printf("sadasd").println();
 
+    }
+
+    float f0() {
+        short i = 0;
+        return i;
     }
 }

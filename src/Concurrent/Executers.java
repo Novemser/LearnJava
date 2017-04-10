@@ -19,6 +19,8 @@ public class Executers {
         ExecutorService e5 = Executors.newWorkStealingPool();
         CountDownLatch countDownLatch = new CountDownLatch(4);
         countDownLatch.countDown();
+        int a = 10, b = 4, c = 5, d = 9;
+        System.out.println(++a * b + c * --d);
         try {
             countDownLatch.await();
         } catch (InterruptedException e) {
