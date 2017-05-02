@@ -8,9 +8,11 @@ package test;
  */
 public class WTFinally {
     public static void main(String[] args) {
-        WTFinally wtFinally = new WTFinally();
-        System.out.println(wtFinally.FinallyReturn());
-        System.out.println(wtFinally.FinallyNoReturn());
+//        WTFinally wtFinally = new WTFinally();
+//        System.out.println(wtFinally.FinallyReturn());
+//        System.out.println(wtFinally.FinallyNoReturn());
+        Integer.toString(10, 16);
+
     }
 
     public int FinallyReturn() {
