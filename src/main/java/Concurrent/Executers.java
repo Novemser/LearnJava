@@ -17,7 +17,8 @@ public class Executers {
         ExecutorService e3 = Executors.newScheduledThreadPool(3);
         ExecutorService e4 = Executors.newSingleThreadExecutor();
         ExecutorService e5 = Executors.newWorkStealingPool();
-        CountDownLatch countDownLatch = new CountDownLatch(4);
+
+        CountDownLatch countDownLatch = new CountDownLatch(1);
         countDownLatch.countDown();
         int a = 10, b = 4, c = 5, d = 9;
         System.out.println(++a * b + c * --d);
