@@ -57,7 +57,7 @@ public class LearnStreaming {
     }
 
     public static void main(String[] args) {
-//        LearnStreaming streaming = new LearnStreaming();
+        LearnStreaming streaming = new LearnStreaming();
 ////        streaming.numberDataStream();
 //        String res = streaming.toString(streaming.streamConstruct());
 //        Stack stack = streaming.toStack(streaming.streamConstruct());
@@ -66,8 +66,16 @@ public class LearnStreaming {
 //        list.add("kmads");
 //        list = streaming.toUpperCase(list);
 //        System.out.println(streaming.neededString(streaming.streamConstruct()));
-        print("sad");
-        System.out.println(getLength("aooji"));
+//        print("sad");
+//        System.out.println(getLength("aooji"));
+        // 并行stream处理
+//        streaming.streamConstruct().parallel().forEach(LearnStreaming::print);
+//        streaming.streamConstruct().parallel().forEach(LearnStreaming::print);
+
+        Stream<String> stringStream = streaming.streamConstruct();
+        stringStream.forEach(System.err::println);
+
+        stringStream.forEach(System.err::println);
     }
 
     public static int getLength(String text) {
@@ -79,6 +87,6 @@ public class LearnStreaming {
      * @param text hehe
      */
     public static void print(String text) {
-        Optional.ofNullable(text).ifPresent(str -> System.out.println("asdjasidjasidijoas" + str));
+        Optional.ofNullable(text).ifPresent(System.out::println);
     }
 }
