@@ -8,6 +8,8 @@ package WTF;
  */
 public class StrangeByte {
     public static void main(String[] args) {
+        // byte/char/short都需要转换成int后进行计算
+
         byte b1 = 1, b2 = 2, b5, b6;
         final byte b3 = 10, b4 = 11;
 //        b5 = b1 + b2;

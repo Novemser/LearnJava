@@ -1,8 +1,8 @@
 package WTF;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Scanner;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Qihu {
     //    public static void main(String[] args) {
@@ -131,15 +131,21 @@ public class Qihu {
 //        int sumA = Arrays.stream(aList).sum();
 //        int sumB = Arrays.stream(bList).sum();
 //    }
-    public static void main(String[] args) {
-        double db = 1;
-        byte bb = 1;
-        char cb = 1;
-
-        // 不能把更高级的类型向下赋值
-//        float fb = 1.0 / 0.0;
-//        int d = 1.0;
-        double db1 = 1.0 / 0.0;
-        int ib = 1 / 0;
+//    public static void main(String[] args) {
+//        double db = 1;
+//        byte bb = 1;
+//        char cb = 1;
+//
+//        // 不能把更高级的类型向下赋值
+////        float fb = 1.0 / 0.0;
+////        int d = 1.0;
+//        double db1 = 1.0 / 0.0;
+//        int ib = 1 / 0;
+//    }
+    public static void main(String[] args) throws ParseException {
+        SimpleDateFormat sf = new SimpleDateFormat("dd/MMM/YYYY", Locale.US);
+        SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        String s = sf.format(df.parse("06-06-1995"));
+        System.out.println(s);
     }
 }

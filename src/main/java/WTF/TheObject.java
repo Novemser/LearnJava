@@ -3,6 +3,17 @@ package WTF;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Scanner;
+import java.util.concurrent.Callable;
+
+//class AB {
+//    private static void doTest(Integer param1, Callable<String> callable) {
+//        try {
+//            String result = callable.call();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//}
 
 /**
  * Project: LearnJava
@@ -23,10 +34,13 @@ public class TheObject {
         Deque<Integer> deque = new ArrayDeque<>();
         System.out.print(deque);
 
-        int i = 1 / 0;
+//        int i = 1 / 0;
+        boolean result = "ddd".equalsIgnoreCase("DdD");
+
+        System.out.println(result);
 
         int sum[] = new int[2];
 
-        System.out.println(o.equals("F"));
+//        System.out.println(o.equals("F"));
     }
 }
